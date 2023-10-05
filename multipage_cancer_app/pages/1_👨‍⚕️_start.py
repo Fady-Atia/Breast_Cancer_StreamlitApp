@@ -5,7 +5,7 @@ import numpy as np
 import plotly.graph_objects as go
 from sklearn.preprocessing import MinMaxScaler 
 def clean_data():
-        data=pd.read_csv("C:/Users/fadys/Desktop/streamlit/multipage_cancer_app/model/data/breast-cancer.csv")
+        data=pd.read_csv("multipage_cancer_app/model/data/breast-cancer.csv")
         data.drop(["id","diagnosis"],axis=1,inplace=True) 
         #print(data.head())
         return data 
@@ -17,8 +17,8 @@ def sidebars(data) :
                  inputs.append(i)
         return inputs          
 def model(input_data):
-                model=pickle.load(open("C:/Users/fadys/Desktop/streamlit/multipage_cancer_app/model/model.pkl","rb"))
-                scaler=pickle.load(open("C:/Users/fadys/Desktop/streamlit/multipage_cancer_app/model/scaler.pkl","rb"))
+                model=pickle.load(open("multipage_cancer_app/model/model.pkl","rb"))
+                scaler=pickle.load(open("multipage_cancer_app/model/scaler.pkl","rb"))
                 cleaned_data=clean_data()
                 scaler.fit(cleaned_data)
                 scaled_data=scaler.transform(input_data)
