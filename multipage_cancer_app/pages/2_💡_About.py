@@ -9,7 +9,7 @@ def lottie(path:str):
        
        
 def main():
-           hi=lottie("C:/Users/fadys/Desktop/streamlit/multipage_cancer_app/hi.json")
+           hi=lottie("multipage_cancer_app/hi.json")
            st.set_page_config(page_title="Breast cancer",layout="wide",initial_sidebar_state="expanded",page_icon="🔍")
            with st.container() :
                         col1,col2=st.columns(2)
@@ -31,7 +31,7 @@ def main():
            st.write("- I used a real dataset from kaggle and applied preproceesing on it")
            st.write("- the challenge is to classify tumors into malignant (cancerous) or benign(non-cancerous) ")
            st.write("- I used Logistic Regression as a model,It gave me an accuracy rate of 97%. ")
-           data=pd.read_csv("C:/Users/fadys/Desktop/streamlit/multipage_cancer_app/model/data/breast-cancer.csv")
+           data=pd.read_csv("multipage_cancer_app/model/data/breast-cancer.csv")
            st.subheader("sample of data :")
            st.write(data.sample(5))
            hist_chart=px.histogram(data_frame=data,x='diagnosis',color='diagnosis',color_discrete_sequence=['#a865c9','#f6abb6'])
