@@ -9,7 +9,7 @@ import path
 dir=path.Path(__file__).abspath()
 sys.path.append(dir.parent.parent)
 st.set_page_config(page_title="BreastCancer",page_icon="☠️",layout="wide",initial_sidebar_state="expanded")
-image=Image.open("C:/Users/fadys/Desktop/streamlit/multipage_cancer_app/final logo.jpg")
+image=Image.open("multipage_cancer_app/final logo.jpg")
 
 def load_lottiefile(filepath:str):
     with open(filepath,"r")as f:
@@ -28,7 +28,7 @@ def main():
              
              
         with col2 :
-              logo=load_lottiefile("C:/Users/fadys/Desktop/streamlit/multipage_cancer_app/logo.json")
+              logo=load_lottiefile("multipage_cancer_app/logo.json")
               st_lottie(logo,height=100) 
                
               st.subheader("How to use the app:")
@@ -36,7 +36,7 @@ def main():
  ]''')
     
              #st.markdown('<span style="background-color:black; color:green;">**Goal of this app to be very easy for the user to can be used for any one who do not have any knowledge about machine learning so only when you change the measurements which in the sidebar you will git the output if the patient have a breast cancer or not** </span>', unsafe_allow_html=True)
-             #lottie=load_lottiefile("C:/Users/fadys/Desktop/streamlit/multipage_cancer_app/lap.json")
+             #lottie=load_lottiefile("multipage_cancer_app/lap.json")
              #st_lottie(lottie)
 if __name__=="__main__":
     main()
